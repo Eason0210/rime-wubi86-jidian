@@ -20,10 +20,8 @@ patch:
     page_size: 5                    # 候选词数量
   switcher:
     hotkeys:
-      - "Control+0"
-      - "Shift+Control+0"
-    abbreviate_options: true
-    caption: "【 输入法设置 】"
+      - "Control+grave" # 注意是control+`，不是command+`
+    caption: "选择方案"
     option_list_separator: "｜"
 
   #-----------------------------------------------
@@ -38,9 +36,9 @@ patch:
   ascii_composer:
     good_old_caps_lock: true       # true: 在保持 cap 键原有的特征， false: 点击不会切换大小写
     switch_key:
-      Caps_Lock: commit_code        # 如果想用 cap 键切换中英文输入，就修改为上面三种的任一一种，否则用 noop
-      Shift_L: commit_code          # macOs 上 shift 键不区别左右，设置参数同上
-      Shift_R: commit_code
+      Caps_Lock: commit_code       # 如果想用 cap 键切换中英文输入，就修改为上面三种的任一一种，否则用 noop
+      Shift_L: noop          # macOs 上 shift 键不区别左右，设置参数同上
+      Shift_R: noop
       Control_L: noop
       Control_R: noop
 
